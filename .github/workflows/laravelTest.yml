@@ -1,0 +1,64 @@
+name: PHPUnit Laravel Test 
+on:
+  push:
+    branches: ['origin']
+  pull_request:
+  schedule:
+    - cron: '0 0 * * *'
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    continue-on-error: ${{ matrix.experimental }}
+    strategy:
+       matrix:
+        os: [ubuntu-latest]
+        php: [8.2]
+        phpunit: [10.1.1]
+        laravel: [11.0.8]
+        include:
+          - laravel: 11.0.8
+            testbench: 9.0.1
+        dependencies:
+          - "locked"
+          - "lowest"
+          - "highest"
+        experimental:
+          - false
+
+    name: ${{ matrix.os }} - ${{ matrix.php }} - ${{ matrix.laravel }} - ${{ matrix.phpunit }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: nanasess/setup-php@v4.0.2
+        with:
+          php-version: 8.2
+
+      - name: Copy environment file
+        run: |
+              cp .env.testing .env
+
+      - name: Directory Permissions
+        run: |
+              chmod -R 777 storage bootstrap/cache
+
+      - name: Install PHPUnit ${{ matrix.phpunit }}
+        run: |
+          composer require "phpunit/phpunit:${{ matrix.phpunit }}" --no-interaction --no-update
+
+      - name: Install dependencies
+        run: |
+             composer update --lock --no-interaction --with-all-dependencies
+
+      - name:  Env Prepare
+        run: |
+             composer post-prepare-test && composer post-create-project
+
+      - name: Install NPM Dependencies
+        run: npm install glob -D --force
+
+      - name:  Unit Test
+        run: | 
+            'vendor/bin/phpunit'  --testsuite=Unit --bootstrap 'vendor/autoload.php' tests | php
