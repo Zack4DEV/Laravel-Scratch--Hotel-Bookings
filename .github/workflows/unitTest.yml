@@ -1,0 +1,51 @@
+
+name: PHPUnit
+on:
+  push:
+    branches: ['upstream']
+  pull_request:
+  schedule:
+    - cron: '0 0 * * *'
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    continue-on-error: ${{ matrix.experimental }}
+    strategy:
+       matrix:
+        os: [ubuntu-latest]
+        php: [8.2]
+        phpunit: [11.0.x-dev]
+        include:
+           - testbench: 9.0.1
+        dependencies:
+          - "locked"
+          - "lowest"
+          - "highest"
+        experimental:
+          - false
+
+    name: ${{ matrix.os }} - ${{ matrix.php }} - ${{ matrix.phpunit }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: nanasess/setup-php@v4.0.2
+        with:
+          php-version: 8.2
+          coverage: none
+
+      - name: Install PHPUnit ${{ matrix.phpunit }}
+        run: |
+          composer require "phpunit/phpunit:${{ matrix.phpunit }}" --no-interaction --no-update
+
+      - name: Install dependencies
+        run: |
+          composer require   --no-interaction --with-all-dependencies
+          composer update  --no-interaction --with-all-dependencies --prefer-dist
+
+      - name: PHPUnit Test
+        run: |
+          " 'vendor/bin/phpunit'  --testsuite=Unit | php "
+ 
