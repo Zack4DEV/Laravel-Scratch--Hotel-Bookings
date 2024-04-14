@@ -40,11 +40,6 @@ jobs:
         run: |
           composer require "phpunit/phpunit:${{ matrix.phpunit }}" --no-interaction --no-update
 
-      - name: Install dependencies
-        run: |
-          composer require   --no-interaction --with-all-dependencies
-          composer update  --no-interaction --with-all-dependencies --prefer-dist
-
       - name: PHPUnit Test
         run: |
           " 'vendor/bin/phpunit'  --testsuite=Unit | php "
