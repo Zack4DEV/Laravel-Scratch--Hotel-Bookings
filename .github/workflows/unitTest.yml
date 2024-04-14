@@ -17,7 +17,7 @@ jobs:
           - 6379:6379
         options: --health-cmd="redis-cli ping" --health-interval=10s --health-timeout=5s --health-retries=3
       mysql:
-        image: mysql
+        image: mysql:latest
         env:
           MYSQL_DATABASE: db
           MYSQL_USER: root
@@ -58,4 +58,5 @@ jobs:
           composer-options: "--prefer-dist --no-interaction"
 
       - name: Unit Test
-        uses: nathanheffley/laravel-phpunit-action@v0.1.0
+        run: |
+          "'vendor/bin/phpunit' --testsuite Unit | php"
