@@ -1,0 +1,101 @@
+name: docker_build
+on: [push, pull_request]
+  branches: ['upstream','origin']
+default:
+  image: project-hotel:3.0
+  with:
+    push: true
+    tags: /srv/app:latest
+  cache:
+    paths: [vendor/]
+  before_script:
+    - curl -sS https:/getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
+    - npm install
+    - npm run deploy
+    - "which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )"
+    - mkdir -p ~/.ssh
+    - eval $(ssh-agent -s)
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  after_script:
+    - rm -rf tmp/
+
+services:
+  - name: php-fpm
+    image: project-hotel
+    container_name: Scratch
+    build:
+      context: .
+      file: docker/php-fpm/Dockerfile
+    restart: unless-stopped
+    tty: true
+    working_dir: /srv/app
+    volumes:
+      - /:/srv/app
+
+  - name: nginx
+    image: project-hotel
+    container_name: Scratch
+    build:
+      context: .
+      file: docker/nginx/Dockerfile
+      args:
+        php_fpm_dns: php-fpm
+    ports:
+      - 80:80
+    restart: unless-stopped
+    tty: true
+    working_dir: /srv/app
+    volumes:
+      - /:/srv/app
+  - name: db
+    image: mariadb:10.6
+    command: --transaction-isolation=READ-COMMITTED --log-bin=binlog --binlog-format=ROW
+    restart: always
+    volumes:
+      - db:/var/lib/mysql:Z
+    environment:
+      - MYSQL_DB_NAME=hotel
+      - MYSQL_USER=root
+      - MYSQL_ROOT_PASSWORD=
+      - MARIADB_AUTO_UPGRADE=1
+      - MARIADB_DISABLE_UPGRADE_BACKUP=1
+    env_file:
+      - db.env
+
+  - name: redis
+    image: redis:alpine
+    restart: always
+
+  - name: app
+    image: Scratch:fpm-alpine
+    restart: always
+    volumes:
+      - Scratch:/var/www/html:z
+    environment:
+      - MYSQL_HOST=db
+      - REDIS_HOST=redis
+    env_file:
+      - db.env
+    depends_on:
+      - db
+      - redis
+
+  - name: web
+    build: .
+    restart: always
+    ports:
+      - 127.0.0.1:8080:80
+    volumes:
+      - Scratch:/var/www/html:z,ro
+    depends_on:
+      - app
+
+  - name: cron
+    image: Scratch:fpm-alpine
+    restart: always
+    volumes:
+      - Scratch:/var/www/html:z
+    entrypoint: /cron.sh
+    depends_on:
+      - db
+      - redis

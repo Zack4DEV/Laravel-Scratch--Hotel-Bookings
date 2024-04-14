@@ -1,0 +1,33 @@
+{
+  "name": "project/app-scratch",
+  "type": "project",
+  "description": "Hotel Bookings Web App Manager based on { Php , HTML , Js , Css } From Scratch .",
+  "license": "MIT",
+  "require": {
+        "php": ">=8.2"
+       }, 	
+  "require-dev": {
+		"mikey179/vfsstream": "2.0.x-dev",
+        	"phpunit/phpunit": "^11.0.1",
+		"orchestra/testbench": ">=9.0.1"
+        },
+  "scripts": {
+    "post-create-project": [
+        "composer dump-autoload -o"
+        ],
+    "post-serve-project": [
+	"@php -S 0.0.0.0:8080 -t ."
+	]        
+  },
+  "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+        },
+  "config": {
+        "optimize-autoloader": true,
+        "prefer-dist": true,
+	"minimum-stability": "dev",
+        "sort-packages": true
+        }	    
+}
