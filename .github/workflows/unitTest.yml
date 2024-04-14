@@ -4,6 +4,7 @@ on:
   push:
     branches: ['upstream']
   pull_request:
+    branches: ['upstream']
   schedule:
     - cron: '0 0 * * *'
 jobs:
@@ -20,8 +21,9 @@ jobs:
         image: mysql:latest
         env:
           MYSQL_DATABASE: db
-          MYSQL_USER: root
-          MYSQL_PASSWORD: ''
+          MYSQL_USER: user
+          MYSQL_PASSWORD: secret
+          MYSQL_ROOT_PASSWORD: root
         ports:
           - 3306:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
