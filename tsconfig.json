@@ -1,0 +1,46 @@
+{
+
+    "compilerOptions": {
+    /* Projects */
+    //  ...
+
+    /* Language and Environment */
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "jsx": "preserve",
+
+    /* Modules */
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./resources/ts/*"]
+    },
+    "types": ["node", "vite/client"],
+    "resolveJsonModule": true,
+
+    /* JavaScript Support */
+    // ...
+
+    /* Emit */
+    "sourceMap": true,
+    "removeComments": true,
+
+    /* Interop Constraints */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Type Checking */
+    "strict": true,
+    "noImplicitAny": false,
+    "strictFunctionTypes": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    /* Completeness */
+    "skipLibCheck": true
+  },
+
+  "exclude": ["node_modules", "dist", "**/*.ts"],
+  "allowJs": true
+}

@@ -1,0 +1,103 @@
+PRAGMA encoding = 'UTF-8';
+
+PRAGMA automatic_index = true;
+PRAGMA checkpoint_fullfsync = true;
+
+PRAGMA optimize;
+PRAGMA schema.optimize;
+
+CREATE TABLE `emp_login` (
+    `id` int(100) NOT NULL,
+    `email` varchar(100) NOT NULL,
+    `password` varchar(100) NOT NULL,
+    `updated_at` timestamp NOT NULL DEFAULT current_time ,
+    `created_at` timestamp NOT NULL DEFAULT timestamp,
+    PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `signup` (
+    `id` int(100) NOT NULL,
+    `username` varchar(100) NOT NULL,
+    `email` varchar(100) NOT NULL,
+    `password` varchar(100) NOT NULL,
+    `updated_at` timestamp NOT NULL DEFAULT current_time,
+    `created_at` timestamp NOT NULL DEFAULT timestamp,
+    PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `roombook` (
+    `id` int(100) NOT NULL,
+    `Name` varchar(100) NOT NULL,
+    `Email` varchar(100) NOT NULL,
+    `Country` varchar(100) NOT NULL,
+    `Phone` varchar(100) NOT NULL,
+    `RoomType` varchar(100) NOT NULL,
+    `Bed` varchar(100) NOT NULL,
+    `Meal` varchar(100) NOT NULL,
+    `NoofRoom` varchar(100) NOT NULL,
+    `cin` date NOT NULL,
+    `cout` date NOT NULL,
+    `nodays` int(100) NOT NULL,
+    `stat` varchar(100) NOT NULL,
+    PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `payment` (
+    `id` int(100) NOT NULL,
+    `name` varchar(100) NOT NULL,
+    `email` varchar(100) NOT NULL,
+    `RoomType` varchar(100) NOT NULL,
+    `Bed` varchar(100) NOT NULL,
+    `NoofRoom` int(100) NOT NULL,
+    `cin` date NOT NULL,
+    `cout` date NOT NULL,
+    `noofdays` int(100) NOT NULL,
+    `roomtotal` double(32, 2) NOT NULL,
+    `bedtotal` double(32, 2) NOT NULL,
+    `meal` varchar(100) NOT NULL,
+    `mealtotal` double(32, 2) NOT NULL,
+    `finaltotal` double(32, 2) NOT NULL,
+    PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `room` (
+    `id` int(100) NOT NULL,
+    `type` varchar(100) NOT NULL,
+    `bedding` varchar(100) NOT NULL,
+    PRIMARY KEY (`id`)
+);
+
+INSERT INTO `room` (`id`, `type`, `bedding`) VALUES
+(1, 'Superior Room', 'Single'),
+(2, 'Superior Room', 'Double'),
+(3, 'Superior Room', 'Triple'),
+(4, 'Superior Room', 'Quad'),
+(10, 'Deluxe Room', 'Single'),
+(11, 'Deluxe Room', 'Double'),
+(12, 'Deluxe Room', 'Triple'),
+(13, 'Deluxe Room', 'Quad'),
+(20, 'Guest House', 'Single'),
+(21, 'Guest House', 'Double'),
+(22, 'Guest House', 'Triple'),
+(23, 'Guest House', 'Quad'),
+(30, 'Single Room', 'Single'),
+(32, 'Single Room', 'Single'),
+(33, 'Single Room', 'Single'),
+(34, 'Single Room', 'Single');
+
+CREATE TABLE `staff` (
+    `id` int(100) NOT NULL,
+    `name` varchar(100) NOT NULL,
+    `work` varchar(100) NOT NULL,
+    PRIMARY KEY (`id`)
+);
+
+INSERT INTO `staff` (`id`, `name`, `work`) VALUES
+(1, 'Adam Evans', 'Manager'),
+(2, 'Jane Edgar', 'Cook'),
+(3, 'Lina Fens', 'Cook'),
+(4, 'Steven Rans', 'Helper'),
+(5, 'George Tain', 'Helper'),
+(6, 'Omar Stale', 'cleaner'),
+(7, 'Sami Larson', 'weighter'),
+(8, 'Eva Burns', 'weighter');
