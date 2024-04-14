@@ -10,13 +10,29 @@ jobs:
   test:
     runs-on: ${{ matrix.os }}
     continue-on-error: ${{ matrix.experimental }}
+    services:
+      redis:
+        image: redis
+        ports:
+          - 6379:6379
+        options: --health-cmd="redis-cli ping" --health-interval=10s --health-timeout=5s --health-retries=3
+      mysql:
+        image: mysql:latest
+        env:
+          MYSQL_DATABASE: db
+          MYSQL_USER: root
+          MYSQL_PASSWORD: ''
+          MYSQL_ROOT_PASSWORD: ''
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
     strategy:
        matrix:
         os: [ubuntu-latest]
         php: [8.2]
-        phpunit: [11.0.x-dev]
+        phpunit: [11.0.1]
         include:
-           - testbench: 9.0.1
+           - testbench: 9.0.3
         dependencies:
           - "locked"
           - "lowest"
@@ -35,11 +51,12 @@ jobs:
         with:
           php-version: 8.2
           coverage: none
+          extensions: dom, curl, libxml, mbstring, zip, pcntl, mysql, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv, imagick, redis
 
-      - name: Install PHPUnit ${{ matrix.phpunit }}
-        run: |
-          composer require "phpunit/phpunit:${{ matrix.phpunit }}" --no-interaction --no-update
+      - name: Install composer dependencies
+        uses: ramsey/composer-install@v2
+        with:
+          composer-options: "--prefer-dist --no-interaction"
 
-      - name: PHPUnit Test
+      - name: Unit Test
         uses: nathanheffley/laravel-phpunit-action@v0.1.0
- 
