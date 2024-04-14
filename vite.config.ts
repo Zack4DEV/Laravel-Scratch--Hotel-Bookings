@@ -1,5 +1,6 @@
 import pkg from './package.json';
 import { fileURLToPath, URL } from 'node:url';
+import {resolve} from 'import-meta-resolve'
 import { defineConfig, loadEnv } from 'vite';
 import { createHtmlPlugin } from 'vite-plugin-html';
 import viteCompression from 'vite-plugin-compression2';
@@ -8,6 +9,8 @@ import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import legacy from '@vitejs/plugin-legacy';
+import { ViteSSG } from 'vite-ssg';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 import AutoComponents from 'unplugin-vue-components/vite';
 import dayjs from 'dayjs';
 
@@ -31,6 +34,7 @@ const __APP_INFO__ = {
 
 export default defineConfig(({ mode }: ConfigEnv) : UserConfig => {
   const env = loadEnv(mode, root);
+  const isProduction = mode === 'production';
 
     return {
         base: './',
@@ -42,6 +46,15 @@ export default defineConfig(({ mode }: ConfigEnv) : UserConfig => {
                 includeAbsolute: false,
               },
             },
+          }),
+          isProduction && ViteSSG({
+            entry: 'resources/ts/main.ts',
+            additionalConfig: (config) => {
+              config.plugins.push(new HtmlWebpackPlugin({
+                filename: 'resources/ts/index.html',
+              }));
+              return config;
+            }
           }),
           vueJsx(),         
           viteCompression(),
@@ -79,9 +92,15 @@ export default defineConfig(({ mode }: ConfigEnv) : UserConfig => {
             },
           },
         },
+        output: { 
+          publicPath:"auto", 
+          scriptType:"text/javascript" 
+        },
         build: {
+          minify: isProduction,
+          sourcemap: !isProduction,
+          outDir: 'build',
           emptyOutDir: true,
-          sourcemap: false,
           chunkSizeWarningLimit: 1500,
           rollupOptions: {
             external: ['axios']
@@ -89,9 +108,9 @@ export default defineConfig(({ mode }: ConfigEnv) : UserConfig => {
         },
         resolve: {
           alias: {
-            '@': fileURLToPath(new URL('.', import.meta.url)),
+            '@': fileURLToPath(new URL('/', import.meta.url)),
             '@assets': fileURLToPath(new URL('resources/assets', import.meta.url)),
-            '@ts': fileURLToPath(new URL('resources/ts/', import.meta.url)),
+            '@ts': fileURLToPath(new URL('resources/ts/', import.meta.url))
           },
         },
         define: {

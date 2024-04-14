@@ -14,7 +14,7 @@ return [
     | any other location as required by the application or its packages.
     |
     */
-    'name' => env('APP_NAME', 'Laravel+VueJs'),
+    'name' => env('APP_NAME', 'Vue.js+Laravel'),
 
     /*
     |--------------------------------------------------------------------------
