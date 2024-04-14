@@ -7,9 +7,8 @@
         "php": ">=8.2"
        }, 	
   "require-dev": {
-		"mikey179/vfsstream": "2.0.x-dev",
-        	"phpunit/phpunit": "^11.0.1",
-		"orchestra/testbench": ">=9.0.1"
+        	"phpunit/phpunit": "11.0.1",
+		"orchestra/testbench": "9.0.3"
         },
   "scripts": {
     "post-create-project": [
