@@ -17,12 +17,11 @@ jobs:
           - 6379:6379
         options: --health-cmd="redis-cli ping" --health-interval=10s --health-timeout=5s --health-retries=3
       mysql:
-        image: mysql:latest
+        image: mysql
         env:
           MYSQL_DATABASE: db
           MYSQL_USER: root
           MYSQL_PASSWORD: ''
-          MYSQL_ROOT_PASSWORD: ''
         ports:
           - 3306:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
