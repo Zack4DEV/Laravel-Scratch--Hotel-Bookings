@@ -42,5 +42,5 @@ jobs:
 
       - name: PHPUnit Test
         run: |
-          " 'vendor/bin/phpunit'  --testsuite=Unit | php "
+          "vendor/bin/phpunit  --testsuite=Unit | php"
  
