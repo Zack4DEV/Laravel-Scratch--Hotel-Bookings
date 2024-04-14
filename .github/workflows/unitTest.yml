@@ -41,6 +41,5 @@ jobs:
           composer require "phpunit/phpunit:${{ matrix.phpunit }}" --no-interaction --no-update
 
       - name: PHPUnit Test
-        run: |
-          "vendor/bin/phpunit  --testsuite=Unit | php"
+        uses: nathanheffley/laravel-phpunit-action@v0.1.0
  
