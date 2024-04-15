@@ -1,0 +1,67 @@
+// Editor code formatting configs
+"editor.formatOnSave": true,
+"editor.formatOnType": false,
+"editor.formatOnPaste": false,
+"editor.codeActionsOnSave": {
+ //For ESLint
+ "source.fixAll.eslint": true,
+ //For TSlint
+ "source.fixAll.tslint": true,
+ //For Stylelint
+ "source.fixAll.stylelint": true
+},
+"[javascript]": {
+ "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[json]": {
+ "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[vue]": {
+ "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[css]": {
+ "editor.defaultFormatter": "stylelint.vscode-stylelint"
+},
+"[html]": {
+ "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+
+"javascript.updateImportsOnFileMove.enabled": "never",
+"javascript.format.enable": true,
+"javascript.validate.enable": true,
+
+"emmet.syntaxProfiles": { "javascript": "jsx" },
+"emmet.includeLanguages": {
+ "javascript": "javascriptreact"
+},
+
+"eslint.alwaysShowStatus": true,
+"eslint.workingDirectories": [{ "mode": "auto" }],
+"eslint.options": {
+ "extensions": [".html", ".js", ".vue", ".jsx"]
+},
+"eslint.probe": [
+ "javascript",
+ "javascriptreact",
+ "typescript",
+ "typescriptreact",
+ "html",
+ "vue",
+ "markdown"
+],
+"eslint.validate": [
+ "javascript",
+ "javascriptreact",
+ "typescript",
+ "typescriptreact",
+ "html",
+ "vue"
+],
+
+"debug.javascript.debugByLinkOptions": "always",
+
+"css.validate": false,
+"less.validate": false,
+"scss.validate": false,
+"stylelint.enable": true,
+"stylelint.validate": ["css", "sass", "vue"],
