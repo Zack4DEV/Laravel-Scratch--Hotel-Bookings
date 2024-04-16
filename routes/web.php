@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Maatwebsite\Excel\Facades\Excel;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,22 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 //<!-- Laravel Routes -->
-Route::post('/','App\Http\Controllers\Authenticate@_signup')->name('userSignup');
-Route::post('/','App\Http\Controllers\Authenticate@_user')->name('userLogin');
-Route::post('/','App\Http\Controllers\Authenticate@_admin')->name('adminLogin');
+Route::get('/','App\Http\Controllers\Users@_users')->name('loginUsers');
 
 
 Route::group([
     'prefix' => config('user.prefix'),
     'as' => 'user.',
     'namespace' => 'App\\Http\\Controllers',
-    'middleware' => 'auth.failback'
-    ], function() { Route::middleware(['auth.failback'])->group(
+    ], function() { Route::middleware(['users.user'])->group(
     function () {
-    Route::get('/home','User@_show')->name('home');
-    Route::post('/home','User@_store')->name('userBookRoom');
-    Route::get('/logout', 'User@_logout')->name('userLogout');
+    Route::post('/home','Users@_store')->name('userBookRoom');
+    Route::get('/logout', 'Users@_logout')->name('logout');
 
     });
 });
@@ -38,16 +35,17 @@ Route::group(
     'prefix' => config('admin.prefix'),
     'as' => 'admin.',
     'namespace' => 'App\\Http\\Controllers',
-    'middleware' => 'auth.failback',
-],function(){ Route::middleware(['auth.failback'])->group(
+],function(){ Route::middleware(['users.admin'])->group(
     function () {
-        Route::get('/logout', 'Admin@_logout')->name('Adminlogout');
+        Route::get('/logout', 'Users@_logout')->name('logout');
 
         Route::get('/dashboard', 'Admin@_show')->name('dashboard');
 
-        Route::post('/exportdata', 'Admin@_migrate')->name('exportdata');
+        Route::get('/exportdata', function () {
+        return Excel::download(new RoombookExport, 'roombook.xlsx');
+        })->name('exportdata');
 
-        Route::get('/roombook/list', 'Roombook@_show')->name('roombook');
+        Route::get('/roombook', 'Roombook@_show')->name('roombook');
 
         Route::post('/roombook/add', 'Roombook@_store')->name('roombookAdd');
 
@@ -59,7 +57,7 @@ Route::group(
 
         Route::post('/roombook/edit', 'RoombookEdit@_update')->name('roombookEditUpdate');
 
-        Route::get('/payment/list', 'Payment@_show')->name('payment');
+        Route::get('/payment', 'Payment@_show')->name('payment');
 
         Route::post('/payment', 'Payment@_store')->name('paymentAdd');
 
@@ -80,6 +78,16 @@ Route::group(
     });
 
 //<!-- Vue-router Routes -->
-Route::get('{any?}', function() {
-        return view('Application');
-        })->where('any', '.*');
+// \App\Http\Middleware\ServeVueAssets::class,
+
+    Route::get('/{any}', function ($uri) {
+    $filePath = public_path('build/assets' . $uri);
+
+    if (File::exists($filePath)) {
+        return redirect(RouteServiceProvider::HOME);
+    }
+
+    // Handle the case when the file doesn't exist
+    abort(404);
+})->where('any', '.*');
+

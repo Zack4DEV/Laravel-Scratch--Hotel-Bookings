@@ -6,7 +6,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 class Payment extends Controller{
 
-    public function _store(Request $id,Request $Name,Request $roomtype,Request $bed,Request $cin ,Request $cout,Request $noofdays ,Request $noofroom ,Request $Meal ,Request $roomtotal ,Request $bedtotal ,Request $mealtotal,Request $finaltotal)
+    public function _show()
+    {
+        return view('Admin/Payment');
+    }
+
+    public function _store()
     {
         $id = $id->input('id');
         $Name = $Name->input('Name');
@@ -26,14 +31,10 @@ class Payment extends Controller{
         return redirect()->back()->with('success', 'Payment Added Successfully');
     }
 
-    public function _show()
-    {
-        return view('Admin/Payment.blade.php');
-    }
-
+ 
     public function _migrate(){
         $data = DB::table('Payment')->get();
-        return view('Admin/Invoice.blade.php',['data'=>$data]);
+        return view('Admin/Invoice',['data'=>$data]);
 
     }
 }

@@ -1,81 +1,248 @@
+<template>
+  <div ref="loginData">
+    <div
+      id="carouselExampleControls"
+      class="carousel slide carousel_section"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            class="carousel-image"
+            src="../../assets/image/__hotel1.jpg"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="carousel-image"
+            src="../../assets/image/__hotel2.jpg"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="carousel-image"
+            src="../../assets/image/__hotel3.jpg"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="logo">
+      <p>Hotel</p>
+    </div>
+
+    <div class="auth_container">
+      <div id="Log_in">
+        <h2>Login</h2>
+        <br />
+        <span>
+          <div class="role_btn">
+            <div class="btns active">User</div>
+            <div class="btns">Admin</div>
+          </div>
+        </span>
+      </div>
+
+      <div id="User_Employee_Log_In">
+        <div id="User_Log_In">
+          <form
+            class="user_login authsection active"
+            id="userlogin"
+            method="POST"
+            @submit.prevent="login"
+          >
+            <div class="form-floating">
+              <input
+                type="text"
+                class="form-control"
+                v-model="Username"
+                name="Username"
+                placeholder=" "
+              />
+              <label for="Username">Username</label>
+            </div>
+            <div class="form-floating">
+              <input
+                type="email"
+                class="form-control"
+                v-model="Email"
+                name="Email"
+                placeholder=" "
+              />
+              <label for="Email">Email</label>
+            </div>
+            <div class="form-floating">
+              <input
+                type="password"
+                class="form-control"
+                v-model="Password"
+                name="Password"
+                placeholder=" "
+              />
+              <label for="Password">Password</label>
+            </div>
+            <button
+              type="submit"
+              name="user_login_submit"
+              class="auth_btn"
+            >
+              Login
+            </button>
+
+            <div class="footer_line">
+              <h6>
+                Don't have an account?
+                <span
+                  class="page_move_btn"
+                  @click="signupstyle"
+                >signup</span
+                >
+              </h6>
+            </div>
+          </form>
+        </div>
+
+        <div id="Employee_Log_In">
+          <form
+            class="employee_login authsection"
+            id="employeelogin"
+            method="POST"
+          >
+            <div class="form-floating">
+              <input
+                type="email"
+                class="form-control"
+                v-model="Username"
+                name="Email"
+                placeholder=" "
+              />
+              <label for="floatingInput">Email</label>
+            </div>
+            <div class="form-floating">
+              <input
+                type="password"
+                class="form-control"
+                v-model="Password"
+                name="Password"
+                placeholder=" "
+              />
+              <label for="floatingPassword">Password</label>
+            </div>
+            <button
+              type="submit"
+              name="login_submit"
+              class="auth_btn"
+            >
+              Log in
+            </button>
+          </form>
+        </div>
+
+        <div id="sign_up">
+          <h2>Sign Up</h2>
+
+          <form class="user_signup" id="usersignup" method="POST">
+            <div class="form-floating">
+              <input
+                type="text"
+                class="form-control"
+                v-model="Username"
+                name="Username"
+                placeholder=" "
+              />
+              <label for="Username">Username</label>
+            </div>
+            <div class="form-floating">
+              <input
+                type="email"
+                class="form-control"
+                v-model="Email"
+                name="Email"
+                placeholder=" "
+              />
+              <label for="Email">Email</label>
+            </div>
+            <div class="form-floating">
+              <input
+                type="password"
+                class="form-control"
+                v-model="Password"
+                name="Password"
+                placeholder=" "
+              />
+              <label for="Password">Password</label>
+            </div>
+            <div class="form-floating">
+              <input
+                type="password"
+                class="form-control"
+                v-model="CPassword"
+                name="CPassword"
+                placeholder=" "
+              />
+              <label for="CPassword">Confirm Password</label>
+            </div>
+
+            <button
+              type="submit"
+              name="user_signup_submit"
+              class="auth_btn"
+            >
+              Sign up
+            </button>
+          </form>
+          <div class="footer_line">
+            <h6>
+              Already have an account?
+              <span class="page_move_btn" @click="loginstyle"
+                >Login</span
+              >
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
 <script>
-import { ref } from "vue"
-
-const login = document.getElementById("Log_in")
-const signup = document.getElementById("sign_up")
-
-const signupstyle = async () => {
-    login.for((login) => {
-        login.style.display = "none"
-    }),
-    signup.for((signup) => {
-        signup.style.display = "flex"
-    })
-}
-
-const loginstyle = async () => {
-    login.for((login) => {
-        login.style.display = "flex"
-    }),
-    signup.for((signup) => {
-        signup.style.display = "none"
-    })
-}
-
-const btns = document.querySelectorAll(".btns")
-const authsection = document.querySelectorAll(".authsection")
-
-var slideNav = function (manual) {
-    btns.forEach((btn) => {
-        btn.classList.remove("active")
-    })
-    authsection.forEach((slide) => {
-        slide.classList.remove("active")
-    })
-
-    btns[manual].classList.add("active")
-    authsection[manual].classList.add("active")
-}
-
-btns.forEach((btn, i) => {
-    btn.addEventListener("click", () => {
-        slideNav(i)
-    })
-})
+import { ref } from 'vue';
 
 export default {
-    setup() {
-        const loginData = ref(0)
-        const login = async () => {
-            try {
-                const response = await fetch("/")
-                const dataResponse = await response.json()
-                loginData.value = dataResponse
-            } catch (error) {
-                console.error("Error fetching login:", error)
-            }
-        }
-        return {
-            login,
-            loginData,
-        }
-    },
+  setup() {
+    const loginData = ref(0);
 
-    data() {
-        return {
-            logins: [
-                {
-                    Username: "username",
-                    Email: "email",
-                    Password: "password",
-                    CPassword: "cpassword",
-                },
-            ],
-        }
-    },
-}
+    const login = async () => {
+      try {
+        const response = await fetch("/");
+        const dataResponse = await response.json();
+        loginData.value = dataResponse;
+      } catch (error) {
+        console.error("Error fetching login:", error);
+      }
+    };
+
+    const Username = ref('');
+    const Email = ref('');
+    const Password = ref('');
+    const CPassword = ref('');
+
+    const signupstyle = () => {
+      // Define signupstyle method logic here
+    };
+
+    return {
+      loginData,
+      login,
+      Username,
+      Email,
+      Password,
+      CPassword,
+      signupstyle,
+    };
+  },
+};
 </script>
-
 <style lang="less" scoped>
 :root {
     --bg-text-shadow: 0 2px 4px rgb(13 0 77 / 8%), 0 3px 6px rgb(13 0 77 / 8%),
@@ -304,208 +471,4 @@ section {
 }
 </style>
 
-<template>
-    <div ref="loginData">
-        <div
-            id="carouselExampleControls"
-            class="carousel slide carousel_section"
-            data-bs-ride="carousel"
-        >
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img
-                        class="carousel-image"
-                        src="../../assets/image/__hotel1.jpg"
-                    />
-                </div>
-                <div class="carousel-item">
-                    <img
-                        class="carousel-image"
-                        src="../../assets/image/__hotel2.jpg"
-                    />
-                </div>
-                <div class="carousel-item">
-                    <img
-                        class="carousel-image"
-                        src="../../assets/image/__hotel3.jpg"
-                    />
-                </div>
-            </div>
-        </div>
 
-        <div class="logo">
-            <p>Hotel</p>
-        </div>
-
-        <div class="auth_container">
-            <div id="Log_in">
-                <h2>Login</h2>
-                <br />
-                <span>
-                    <div class="role_btn">
-                        <div class="btns active">User</div>
-                        <div class="btns">Admin</div>
-                    </div>
-                </span>
-            </div>
-
-            <div id="User_Employee_Log_In">
-                <div id="User_Log_In">
-                    <form
-                        class="user_login authsection active"
-                        id="userlogin"
-                        method="POST"
-                    >
-                        <div class="form-floating">
-                            <input
-                                type="text"
-                                class="form-control"
-                                v-model="Username"
-                                name="Username"
-                                placeholder=" "
-                            />
-                            <label for="Username">Username</label>
-                        </div>
-                        <div class="form-floating">
-                            <input
-                                type="email"
-                                class="form-control"
-                                v-model="Email"
-                                name="Email"
-                                placeholder=" "
-                            />
-                            <label for="Email">Email</label>
-                        </div>
-                        <div class="form-floating">
-                            <input
-                                type="password"
-                                class="form-control"
-                                v-model="Password"
-                                name="Password"
-                                placeholder=" "
-                            />
-                            <label for="Password">Password</label>
-                        </div>
-                        <button
-                            type="submit"
-                            name="user_login_submit"
-                            class="auth_btn"
-                        >
-                            Login
-                        </button>
-
-                        <div class="footer_line">
-                            <h6>
-                                Don't have an account?
-                                <span
-                                    class="page_move_btn"
-                                    onclick="signupstyle"
-                                    >signup</span
-                                >
-                            </h6>
-                        </div>
-                    </form>
-                </div>
-
-                <div id="Employee_Log_In">
-                    <form
-                        class="employee_login authsection"
-                        id="employeelogin"
-                        method="POST"
-                    >
-                        <div class="form-floating">
-                            <input
-                                type="email"
-                                class="form-control"
-                                v-model="Username"
-                                name="Email"
-                                placeholder=" "
-                            />
-                            <label for="floatingInput">Email</label>
-                        </div>
-                        <div class="form-floating">
-                            <input
-                                type="password"
-                                class="form-control"
-                                v-model="Password"
-                                name="Password"
-                                placeholder=" "
-                            />
-                            <label for="floatingPassword">Password</label>
-                        </div>
-                        <button
-                            type="submit"
-                            name="login_submit"
-                            class="auth_btn"
-                        >
-                            Log in
-                        </button>
-                    </form>
-                </div>
-
-                <div id="sign_up">
-                    <h2>Sign Up</h2>
-
-                    <form class="user_signup" id="usersignup" method="POST">
-                        <div class="form-floating">
-                            <input
-                                type="text"
-                                class="form-control"
-                                v-model="Username"
-                                name="Username"
-                                placeholder=" "
-                            />
-                            <label for="Username">Username</label>
-                        </div>
-                        <div class="form-floating">
-                            <input
-                                type="email"
-                                class="form-control"
-                                v-model="Email"
-                                name="Email"
-                                placeholder=" "
-                            />
-                            <label for="Email">Email</label>
-                        </div>
-                        <div class="form-floating">
-                            <input
-                                type="password"
-                                class="form-control"
-                                v-model="Password"
-                                name="Password"
-                                placeholder=" "
-                            />
-                            <label for="Password">Password</label>
-                        </div>
-                        <div class="form-floating">
-                            <input
-                                type="password"
-                                class="form-control"
-                                v-model="CPassword"
-                                name="CPassword"
-                                placeholder=" "
-                            />
-                            <label for="CPassword">Confirm Password</label>
-                        </div>
-
-                        <button
-                            type="submit"
-                            name="user_signup_submit"
-                            class="auth_btn"
-                        >
-                            Sign up
-                        </button>
-                    </form>
-                        <div class="footer_line">
-                            <h6>
-                                Already have an account?
-                                <span class="page_move_btn" onclick="loginstyle"
-                                    >Login</span
-                                >
-                            </h6>
-                        </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</template>

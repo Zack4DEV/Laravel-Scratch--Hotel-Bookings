@@ -7,37 +7,32 @@ const routes = [
         path: "/home",
         component: () => import("@ts/components/UserBooking.vue"),
     },
-    {
-        path: "/admin/",
-        redirect: "/admin/dashboard",
-        component: () => import("@ts/components/Admin/AdminBooking.vue"),
-    },
-    {
-        path: "/admin/dashboard",
+ {
+        path: "/dashboard",
         component: () => import("@ts/components/Admin/DashboardAdmin.vue"),
     },
     {
-        path: "/admin/roombook",
+        path: "/roombook",
         component: () => import("@ts/components/Admin/RoombookList.vue"),
     },
     {
-        path: "/admin/roombookedit",
+        path: "/roombookedit",
         component: () => import("@ts/components/Admin/RoombookEdit.vue"),
     },
     {
-        path: "/admin/payment",
+        path: "/payment",
         component: () => import("@ts/components/Admin/PaymentList.vue"),
     },
     {
-        path: "/admin/invoice",
+        path: "/invoice",
         component: () => import("@ts/components/Admin/InvoicePrint.vue"),
     },
     {
-        path: "/admin/room",
+        path: "/room",
         component: () => import("@ts/components/Admin/RoomShow.vue"),
     },
     {
-        path: "/admin/staff",
+        path: "/staff",
         component: () => import("@ts/components/Admin/StaffShow.vue"),
     },
 ]

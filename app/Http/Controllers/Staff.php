@@ -11,7 +11,7 @@ class Staff extends Controller{
         return view('Admin/Staff.blade.php');
     }
 
-    public function _store(Request $staffname ,Request $staffwork)
+    public function _store()
     {
         $staffname = $staffname->input('staffname');
         $staffwork = $staffwork->input('staffwork');
@@ -20,7 +20,7 @@ class Staff extends Controller{
         return redirect()->back()->with('success', 'Staff Added Successfully');
     }
 
-    public function _delete(Request $name,Request $work,Request $id)
+    public function _delete()
     {
         $name = $name->input('name');
         $work = $work->input('work');

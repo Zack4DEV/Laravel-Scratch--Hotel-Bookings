@@ -8,10 +8,10 @@ class Room extends Controller{
 
     public function _room()
     {
-        return view('Admin/Room.blade.php');
+        return view('Admin/Room');
     }
 
-    public function _store(Request $typeofroom ,Request $typeofbed)
+    public function _store()
     {
         $typeofroom = $typeofroom->input('troom');
         $typeofbed = $typeofbed->input('bed');
@@ -20,7 +20,7 @@ class Room extends Controller{
         return redirect()->back()->with('success', 'Room Added Successfully');
     }
 
-    public function _delete(Request $type,Request $bedding,Request $id)
+    public function _delete()
     {
         $type = $type->input('type');
         $bedding = $bedding->input('bedding');

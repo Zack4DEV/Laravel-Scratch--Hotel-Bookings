@@ -25,7 +25,7 @@ class VueServiceProvider extends ServiceProvider
     if ($this->app->runningInConsole()) {
       $this->publishes([
         __DIR__ . '/resources' => base_path('resources'),
-        __DIR__ . '/resources/routes' => base_path('routes'),
+        __DIR__ . '/resources/ts/routes' => base_path('routes'),
         __DIR__ . '/package.json' => base_path('package.json'),
         __DIR__ . '/vite.config.ts' => base_path('vite.config.ts'),
         __DIR__ . '/tsconfig.json' => base_path('tsconfig.json'),

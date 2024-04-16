@@ -9,10 +9,10 @@ class Roombook extends Controller{
 
     public function _show()
     {
-        return view('Admin/Roombook.blade.php');
+        return view('Admin/Roombook');
     }
 
-    public function _store(Request $stat,Request $Name,Request $Email,Request $Phone , Request $Roomtype ,Request $Bed ,Request $Noofroom ,Request $Meal ,Request $cin ,Request $cout)
+    public function _store()
     {
     $Name = $Name->input('Name');
     $Email = $Email->input('Email');
@@ -31,7 +31,7 @@ class Roombook extends Controller{
     return redirect()->back()->with('success', 'Room Booked Successfully');
     }
 
-    public function _confirm(Request $stat,Request $id){
+    public function _confirm(){
         $id = $id->session()->get('id');
         $stat = $stat->session()->get('stat')->set('Confirmed');
         $data = array('stat'=>$stat);
@@ -39,7 +39,7 @@ class Roombook extends Controller{
         return redirect()->back()->with('success', 'Room Booked Confirmed Successfully');
     }
 
-    public function _delete(Request $id){
+    public function _delete(){
         $id = $id->session()->get('id');
         $data = array('id'=>$id,'Name' => '','Email' => '','Phone' => '','Roomtype' => '','Bed' => '','Noofroom' => '','Meal' => '','cin' => '','cout' => '','stat' => '');
         DB::table('Roombook')->where('id',$id)->delete($data);

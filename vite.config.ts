@@ -36,22 +36,22 @@ export default defineConfig(({ mode }: ConfigEnv) : UserConfig => {
     return {
         base: './',
         plugins: [
-          vue({
-            template: {
-              transformAssetUrls: {
-                base: null,
-                includeAbsolute: false,
-              },
-            },
-          }),
           vueJsx(),         
           viteCompression(),
           laravel({
-            input: [
-              'resources/ts/main.ts', 
-
-            ],
-            refresh: true,
+              input: [
+                  'resources/sass/app.scss',
+                  'resources/ts/main.ts',
+              ],
+              refresh: true,
+          }),
+          vue({
+              template: {
+                  transformAssetUrls: {
+                      base: null,
+                      includeAbsolute: false,
+                  },
+              },
           }),
           AutoComponents({
             dirs: ['resources/ts/components'],
@@ -87,7 +87,7 @@ export default defineConfig(({ mode }: ConfigEnv) : UserConfig => {
         build: {
           minify: isProduction,
           sourcemap: !isProduction,
-          outDir: '/public/build',
+          outDir: './public/build',
           emptyOutDir: true,
           chunkSizeWarningLimit: 1500,
           rollupOptions: {

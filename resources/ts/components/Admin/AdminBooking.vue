@@ -1,102 +1,87 @@
+<template>
+  <div ref="adminData">
+    <nav class="uppernav">
+      <div class="logo">
+        <p>Hotel</p>
+      </div>
+      <router-link class="logout" to="/logout">
+        <button class="btn btn-danger">Logout</button>
+      </router-link>
+    </nav>
+
+    <nav class="sidenav">
+      <ul>
+        <li class="pagebtn active" @click="frameActive(0)">
+          <img src="../../../assets/image/icon/dashboard.png" />Dashboard
+        </li>
+        <li class="pagebtn" @click="frameActive(1)">
+          <img src="../../../assets/image/icon/bed.png" />Room Booking
+        </li>
+        <li class="pagebtn" @click="frameActive(2)">
+          <img src="../../../assets/image/icon/wallet.png" />Payment
+        </li>
+        <li class="pagebtn" @click="frameActive(3)">
+          <img src="../../../assets/image/icon/bedroom.png" />Rooms
+        </li>
+        <li class="pagebtn" @click="frameActive(4)">
+          <img src="../../../assets/image/icon/staff.png" />Staff
+        </li>
+      </ul>
+    </nav>
+
+    <div class="mainscreen">
+      <div id="dashboardframe" class="frames active">
+        <router-link to="/dashboard"><h1>Dashboard</h1></router-link>
+      </div>
+      <div id="roombookframe" class="frames">
+        <router-link to="/roombook"><h1>Roombook</h1></router-link>
+      </div>
+      <div id="paymentframe" class="frames">
+        <router-link to="/payment"><h1>Payment</h1></router-link>
+      </div>
+      <div id="roomframe" class="frames">
+        <router-link to="/room"><h1>Rooms</h1></router-link>
+      </div>
+      <div id="staffframe" class="frames">
+        <router-link to="/staff"><h1>Staff</h1></router-link>
+      </div>
+    </div>
+    <div id="mobileview">
+      <h5>Admin panel doesn't show in mobile view</h5>
+    </div>
+  </div>
+</template>
+
 <script>
 import { ref } from "vue"
 
-var btns = document.querySelectorAll(".pagebtn")
-var frames = document.querySelectorAll(".frames")
-
-var frameActive = function (manual) {
-    btns.forEach((btn) => {
-        btn.classList.remove("active")
-    })
-    frames.forEach((slide) => {
-        slide.classList.remove("active")
-    })
-
-    btns[manual].classList.add("active")
-    frames[manual].classList.add("active")
-}
-
-btns.forEach((btn, i) => {
-    btn.addEventListener("click", () => {
-        frameActive(i)
-    })
-})
-
-
 export default {
-    setup() {
-        const adminData = ref(0)
+  setup() {
+    const adminData = ref(0)
 
-        return {
-            adminData,
-        }
-    },
+    const frameActive = (manual) => {
+      const btns = document.querySelectorAll(".pagebtn")
+      const frames = document.querySelectorAll(".frames")
+
+      btns.forEach((btn) => {
+        btn.classList.remove("active")
+      })
+      frames.forEach((slide) => {
+        slide.classList.remove("active")
+      })
+
+      btns[manual].classList.add("active")
+      frames[manual].classList.add("active")
+    }
+
+    return {
+      adminData,
+      frameActive
+    }
+  }
 }
 </script>
-<template>
-    <div ref="adminData">
-        <nav class="uppernav">
-            <div class="logo">
-                <p>Hotel</p>
-            </div>
-            <router-link class="logout" to="/logout">
-                <button class="btn btn-danger">Logout</button>
-            </router-link>
-        </nav>
 
-        <nav class="sidenav">
-            <ul>
-                <li class="pagebtn active">
-                    <img
-                        src="../../../assets/image/icon/dashboard.png"
-                    />Dashboard
-                </li>
-                <li class="pagebtn">
-                    <img src="../../../assets/image/icon/bed.png" />Room
-                    Booking
-                </li>
-                <li class="pagebtn">
-                    <img src="../../../assets/image/icon/wallet.png" />Payment
-                </li>
-                <li class="pagebtn">
-                    <img src="../../../assets/image/icon//bedroom.png" />Rooms
-                </li>
-                <li class="pagebtn">
-                    <img src="../../../assets/image/icon/staff.png" />Staff
-                </li>
-            </ul>
-        </nav>
-
-        <div class="mainscreen">
-            <div id="dashboardframe">
-            <router-link>
-                <link to="/dashboard"><h1>Dashboard</h1></link>
-            </router-link>
-            </div>
-            <div id="roombookframe"><router-link>
-                <link to="/roombook"><h1>Roombook</h1></link>
-            </router-link>
-            </div>
-            <div id="paymentframe"><router-link>
-                <link to="/payment"><h1>Payment</h1></link>
-                </router-link>
-            </div>
-            <div id="roomframe">
-            <router-link>
-                <link to="/room"><h1>Rooms</h1></link>
-            </router-link>
-            </div>
-            <div id="staffframe">
-            <router-link>
-                <link to="/staff"><h1>Staff</h1></link>
-            </router-link>
-            </div>
-        </div>
-        <div id="mobileview">
-            <h5>Admin panel doesn't show in mobile view</h5>
-        </div>
-    </div>
-</template>
 <style lang="less" scoped>
 .pace {
     -webkit-pointer-events: none;
@@ -232,7 +217,9 @@ ul li.active {
     height: 100vh;
     width: 100%;
     display: none;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc
+
+;
 }
 
 .frames.active {

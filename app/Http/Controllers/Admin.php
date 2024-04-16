@@ -7,22 +7,10 @@ use Illuminate\Support\Facades\Auth;
 
 class Admin extends Controller{
 
-
-public function _logout()
-{
-
-    Auth::logout();
-    return redirect('/');
-}
-
 public function _show()
     {
-        return view('Admin/Dashboard.blade.php');
+        return view('Admin/Dashboard');
     }
 
-public function _migrate()
-    {
-        return view('Admin/Exportdata.blade.php');
-    }
 
 }

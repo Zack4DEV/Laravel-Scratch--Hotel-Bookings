@@ -1,3 +1,4 @@
+import './bootstrap';
 import { createApp } from "vue"
 import { defineComponent } from 'vue';
 import { setupPageStackRouter } from "./router/pageStack";

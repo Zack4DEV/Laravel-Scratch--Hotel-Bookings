@@ -9,10 +9,10 @@ class RoombookEdit extends Controller{
 
     public function _show()
     {
-        return view('Admin/RoombookEdit.blade.php');
+        return view('Admin/RoombookEdit');
     }
 
-    public function _update(Request $Name,Request $Email,Request $Phone , Request $Roomtype ,Request $Bed ,Request $Noofroom ,Request $Meal ,Request $cin ,Request $cout)
+    public function _update()
     {
     $Name = $Name->input('Name');
     $Email = $Email->input('Email');
