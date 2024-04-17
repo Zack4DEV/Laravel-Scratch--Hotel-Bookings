@@ -24,6 +24,7 @@
         "nunomaduro/termwind": ">=2.0.1",
         "orchestra/testbench": "9.0.3",
         "phpunit/phpunit": "11.0.1",
+        "laravel/dusk": ">=8.2.0",
         "spatie/laravel-ignition": "dev-main"
     },
     "autoload": {

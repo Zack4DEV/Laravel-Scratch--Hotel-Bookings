@@ -16,7 +16,7 @@ const routes = [
         component: () => import("@ts/components/Admin/RoombookList.vue"),
     },
     {
-        path: "/roombookedit",
+        path: "/roombook/edit",
         component: () => import("@ts/components/Admin/RoombookEdit.vue"),
     },
     {

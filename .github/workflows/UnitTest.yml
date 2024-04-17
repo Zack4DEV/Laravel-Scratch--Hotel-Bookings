@@ -1,4 +1,4 @@
-name: PHPUnit Laravel Test 
+name: PHPUnit Test 
 on:
   push:
     branches: ['origin']
@@ -61,4 +61,4 @@ jobs:
 
       - name:  Unit Test
         run: | 
-            'vendor/bin/phpunit'  --testsuite=Unit --bootstrap 'vendor/autoload.php' tests | php
+            'vendor/bin/phpunit'  --bootstrap 'vendor/autoload.php' tests | php

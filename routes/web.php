@@ -22,7 +22,7 @@ Route::group([
     'prefix' => config('user.prefix'),
     'as' => 'user.',
     'namespace' => 'App\\Http\\Controllers',
-    ], function() { Route::middleware(['users.user'])->group(
+    ], function() { Route::middleware(['auth'])->group(
     function () {
     Route::post('/home','Users@_store')->name('userBookRoom');
     Route::get('/logout', 'Users@_logout')->name('logout');
@@ -35,7 +35,7 @@ Route::group(
     'prefix' => config('admin.prefix'),
     'as' => 'admin.',
     'namespace' => 'App\\Http\\Controllers',
-],function(){ Route::middleware(['users.admin'])->group(
+],function(){ Route::middleware(['auth'])->group(
     function () {
         Route::get('/logout', 'Users@_logout')->name('logout');
 
@@ -76,6 +76,7 @@ Route::group(
         Route::post('/staff/delete', 'Staff@_delete')->name('staffDelete');
     });
     });
+
 
 //<!-- Vue-router Routes -->
 // \App\Http\Middleware\ServeVueAssets::class,
