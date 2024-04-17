@@ -42,7 +42,7 @@ jobs:
 
       - name: Directory Permissions
         run: |
-              chmod -R 777 storage bootstrap/cache
+              chmod --reference public/favicon.ico -R storage bootstrap
 
       - name: Install PHPUnit ${{ matrix.phpunit }}
         run: |
