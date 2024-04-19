@@ -7,12 +7,13 @@ A Hotel Web App Where Users Can Book.
 <br/>
 
 ### Used Technologies:
-##### [Laravel](https://laravel.com/docs/10.x/)
+##### [Laravel](https://laravel.com/docs/11.x/)
 
 ### Launch:
 composer dump-autoload -o && npm ci
 <br/>
-php artisan key:generate
+php artisan key:generate 
+php artisan migrate
 <br/>
 php artisan serve -v
 

@@ -1,19 +1,19 @@
 <?php
 
-namesapce Tests\Browser;
+namespace Tests\Browser;
 
-use Laravel\Dusk\Browser;
-use Tests\DuskTestCase;
+use Tests\TestCase;
 
 
-class ExampleTest extends DuskTestCase
+
+class ExampleTest extends TestCase
 {
     /**
      * A Dusk test example.
      *
      * @return void
      */
-    public function test_example()
+    public function test_that_vue()
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/home')
