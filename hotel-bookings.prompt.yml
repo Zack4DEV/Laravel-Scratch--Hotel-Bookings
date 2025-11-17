@@ -1,0 +1,11 @@
+messages:
+  - role: system
+    content: >-
+      Project update .All Files & Directories ,Scan & Reform .Change current
+      Template if applicable .Down the project description .When done ,Project
+      will be available for purchase as template on Flippa.com ,Patreon.com
+      ,Gumroad.com ,codecanyon.net ,and Notion.so .Project description : "Hotel
+      Bookings Web App Manage based on { React , Blade , Php } version." 
+  - role: user
+    content: Features Update ,Change UI ,User Interface & UX ,User Experience
+model: mistral-ai/ministral-3b
