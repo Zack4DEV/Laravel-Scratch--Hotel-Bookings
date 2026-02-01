@@ -34,7 +34,7 @@ jobs:
       - name: Setup PHP
         uses: nanasess/setup-php@v4.0.2
         with:
-          php-version: 8.2
+          php-version: ${{ matrix.php }}
 
       - name: Copy environment file
         run: |
