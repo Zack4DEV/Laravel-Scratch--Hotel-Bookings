@@ -45,7 +45,7 @@ jobs:
       - name: Create SQLite Database
         run: |
           mkdir -p database
-          sqlite3 database/create_SQLite.sqlite
+          sqlite3 database/database.sqlite
 
       - name: Execute Artisan Commands
         run: |
