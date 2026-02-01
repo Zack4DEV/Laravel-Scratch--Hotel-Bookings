@@ -38,10 +38,6 @@ jobs:
         run: |
               cp .env.testing .env
 
-      - name: Directory Permissions
-        run: |
-              chmod --reference public/favicon.ico -R storage bootstrap
-
       - name: Install PHPUnit ${{ matrix.phpunit }}
         run: |
           composer require "phpunit/phpunit:${{ matrix.phpunit }}" --no-interaction --no-update
