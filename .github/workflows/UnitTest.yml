@@ -51,7 +51,6 @@ jobs:
         run: |
           cp .env.testing .env
           php artisan key:generate
-          php artisan migrate --force
 
       - name: Run Unit Tests
         run: php artisan test
