@@ -538,3 +538,7 @@
 [stacktrace]
 #0 {main}
 "} 
+[2026-02-01 15:16:17] local.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
+[stacktrace]
+#0 {main}
+"} 
