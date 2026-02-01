@@ -18,8 +18,8 @@ jobs:
         dependency-version: [prefer-stable]
         include:
           - laravel: '12.*'
-            testbench: '10.*'
-            phpunit: '11.5'
+            testbench: '11.5.50'
+            phpunit: '11.5.0'
             experimental: false
 
     name: ${{ matrix.os }} - PHP ${{ matrix.php }} - L${{ matrix.laravel }}
