@@ -1,1 +1,49 @@
-{ "compilerOptions": { "target": "ESNext", "lib": ["DOM", "DOM.Iterable", "ESNext"], "module": "ESNext", "skipLibCheck": true, "moduleResolution": "bundler", "allowImportingTsExtensions": true, "resolveJsonModule": true, "isolatedModules": true, "noEmit": true, "jsx": "react-jsx", "strict": true, "noUnusedLocals": true, "noUnusedParameters": true, "noFallthroughCasesInSwitch": true, "baseUrl": ".", "paths": { "@/*": ["resources/js/*"], "@admin/*": ["resources/js/admin/*"], "@components/*": ["resources/js/components/*"], "@navigation/*": ["resources/js/navigation/*"], "@utils/*": ["resources/js/utils/*"], "@hotel/*": ["resources/js/components/Hotel/*"], "@screens/*": ["resources/js/admin/screens/*"], "@adminComponents/*": ["resources/js/admin/components/*"] }, "types": ["vite/client"], "allowJs": true, "checkJs": true, "esModuleInterop": true, "allowSyntheticDefaultImports": true, "forceConsistentCasingInFileNames": true }, "include": [ "resources/js/**/*.ts", "resources/js/**/*.tsx", "resources/js/**/*.js", "resources/js/**/*.jsx" ], "exclude": [ "node_modules", "public", "vendor" ], "references": [ { "path": "./tsconfig.node.json" } ] } ``` 3. tsconfig.node.json: ```json { "compilerOptions": { "composite": true, "skipLibCheck": true, "module": "ESNext", "moduleResolution": "bundler", "allowSyntheticDefaultImports": true, "strict": true }, "include": [ "vite.config.ts", "vite.config.js" ] }
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "lib": ["DOM", "DOM.Iterable", "ESNext"],
+        "module": "ESNext",
+        "skipLibCheck": true,
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+        "useDefineForClassFields": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["resources/js/*"],
+            "@admin/*": ["resources/js/admin/*"],
+            "@components/*": ["resources/js/components/*"],
+            "@navigation/*": ["resources/js/navigation/*"],
+            "@utils/*": ["resources/js/utils/*"],
+            "@hotel/*": ["resources/js/components/Hotel/*"],
+            "@screens/*": ["resources/js/admin/screens/*"],
+            "@adminComponents/*": ["resources/js/admin/components/*"]
+        },
+        "types": ["vite/client"],
+        "allowJs": true,
+        "checkJs": false,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "include": [
+        "resources/js/**/*.ts",
+        "resources/js/**/*.tsx",
+        "resources/js/**/*.d.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "public",
+        "vendor"
+    ],
+    "references": [
+        { "path": "./tsconfig.node.json" }
+    ]
+}

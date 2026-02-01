@@ -1,58 +1,59 @@
 name: PHPUnit Test 
 on:
   push:
-    branches: ['upstream' ,'origin']
+    branches: ['upstream', 'origin']
   pull_request:
   schedule:
     - cron: '0 0 * * *'
+
 jobs:
   test:
     runs-on: ${{ matrix.os }}
-    continue-on-error: ${{ matrix.experimental }}
     strategy:
-       matrix:
+      fail-fast: false
+      matrix:
         os: [ubuntu-latest]
-        php: [8.2]
-        phpunit: [10.1.1]
-        laravel: [11.0.8]
+        php: ['8.2', '8.3'] # Laravel 12 supporte 8.2+
+        laravel: ['12.*']
+        dependency-version: [prefer-stable]
         include:
-          - laravel: 11.0.8
-            testbench: 9.0.1
-        dependencies:
-          - "locked"
-          - "lowest"
-          - "highest"
-        experimental:
-          - false
+          - laravel: '12.*'
+            testbench: '10.*'
+            phpunit: '11.5'
+            experimental: false
 
-    name: ${{ matrix.os }} - ${{ matrix.php }} - ${{ matrix.laravel }} - ${{ matrix.phpunit }}
+    name: ${{ matrix.os }} - PHP ${{ matrix.php }} - L${{ matrix.laravel }}
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup PHP and Composer
-        uses: benzine-framework/action-setup-php@main
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv, imagick, fileinfo
+          coverage: none
 
       - name: Copy environment file
-        run: |
-              cp .env.testing .env
-
-      - name: Install PHPUnit ${{ matrix.phpunit }}
-        run: |
-          composer require "phpunit/phpunit:${{ matrix.phpunit }}" --no-interaction --no-update
+        run: cp .env.testing .env || cp .env.example .env
 
       - name: Install dependencies
         run: |
-             composer update --lock --no-interaction --with-all-dependencies
+          composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" "phpunit/phpunit:${{ matrix.phpunit }}" --no-interaction --no-update
+          composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction --with-all-dependencies
 
-      - name:  Env Prepare
+      - name: Create SQLite Database
         run: |
-             composer post-prepare-test && composer post-create-project
+          mkdir -p database
+          touch database/database.sqlite
+          sqlite3 database/database.sqlite < database/create_SQLite.sqlite
 
-      - name: Install NPM Dependencies
-        run: npm install glob -D --force
+      - name: Execute Artisan Commands
+        run: |
+          cp .env.testing .env
+          php artisan key:generate
+          php artisan migrate --force
 
-      - name:  Unit Test
-        run: | 
-            'vendor/bin/phpunit'  --bootstrap 'vendor/autoload.php' tests | php
+      - name: Run Unit Tests
+        run: php artisan test

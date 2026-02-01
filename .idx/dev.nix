@@ -1,59 +1,53 @@
-
-
-# To learn more about how to use Nix to configure your environment
-# see: https://developers.google.com/idx/guides/customize-idx-env
 { pkgs, ... }: {
-  # Which nixpkgs channel to use.
-  channel = "unstable";
+  channel = "stable-24.11"; 
 
-  # Use https://search.nixos.org/packages to find packages
   packages = [
-      pkgs.nodejs_23
-      pkgs.yarn
-      pkgs.typescript
-      pkgs.php
-      pkgs.php82Packages.composer
-     # pkgs.vscode-extensions.ms-azuretools.vscode-docker
-      pkgs.docker_27
-      pkgs.docker-compose
-     # pkgs.docker-engine
-
-      pkgs.sudo
-    #  pkgs.gh
-    #  pkgs.git
+    pkgs.php83                
+    pkgs.php83Packages.composer
+    pkgs.nodejs_22            
+    pkgs.typescript
+    pkgs.sqlite               
+    pkgs.docker
+    pkgs.docker-compose
   ];
 
-  # Sets environment variables in the workspace
-  env = {};
-  idx = {
-    # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
-    extensions = [];
-    # Enable previews
-      previews = {
-        # web = {
-        #   # Example: run "npm run dev && php artisan serve" with PORT set to IDX's defined port for previews,
-        #   # and show it in IDX's web preview panel
-        #   command = ["npm" "run" "dev" "&&" "php" "artisan" "serve"];
-        #   manager = "web";
-        #   env = {
-        #     # Environment variables to set for your server
-        #     PORT = "$PORT";
-        #   };
-        # };
-      };
+  env = {
+    DB_CONNECTION = "sqlite";
+    DB_DATABASE = "database/database.sqlite";
+  };
 
-    # Workspace lifecycle hooks
-    workspace = {
-       onCreate = {
-        create-venv = ''
-          npm ci --production
-        '';
-        # Open editors for the following files by default, if they exist:
-        default.openFiles = [ "README.md" ];
+  idx = {
+    extensions = [
+        "onecentlin.laravel-blade"
+        "amiralizadeh9480.laravel-extra-intellisense"
+        "shufo.vscode-blade-formatter"
+        "bmewburn.vscode-intelephense-client"
+    ];
+    
+    previews = {
+      enable = true;
+      previews = {
+        web = {
+          command = ["php" "artisan" "serve" "--port" "$PORT" "--host" "0.0.0.0"];
+          manager = "web";
+        };
       };
-       onStart = {
-        # Example: start a background task to watch and re-build backend code
-         watch-backend = "npm run dev && php artisan serve";
+    };
+
+    workspace = {
+      onCreate = {
+        setup = ''
+          composer install
+          npm install
+          cp .env.example .env
+          php artisan key:generate
+          mkdir -p database
+          touch database/database.sqlite
+          php artisan migrate --seed
+        '';
+      };
+      onStart = {
+        watch-frontend = "npm run dev";
       };
     };
   };
