@@ -14,10 +14,10 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         php: ['8.3']
-        laravel: ['12.*']
+        laravel: ['13.*']
         dependency-version: [prefer-stable]
         include:
-          - laravel: '12.*'
+          - laravel: '13.*'
             testbench: '11.5.50'
             phpunit: '11.5.0'
             experimental: false
@@ -40,7 +40,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          composer require --no-interaction --no-update --with-all-dependencies
           composer update --prefer-dist --no-interaction --with-all-dependencies
 
       - name: Create SQLite Database
