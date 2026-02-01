@@ -9,7 +9,7 @@ use App\Http\Controllers\Admin;
 use App\Http\Controllers\Roombook;
 use App\Http\Controllers\RoombookEdit;
 use App\Http\Controllers\Payment;
-use App\Http\Controllers\Room;
+use App\Http\Controllers\RoomController;
 use App\Http\Controllers\Staff;
 use App\Exports\RoombookExport; // Assurez-vous que cet export existe
 
@@ -54,9 +54,9 @@ Route::prefix('api')->group(function () {
 
             // Room Routes
             Route::prefix('room')->group(function () {
-                Route::get('/', [Room::class, '_room']);
-                Route::post('/add', [Room::class, '_store']);
-                Route::post('/delete', [Room::class, '_delete']);
+                Route::get('/', [RoomController::class, '_room']);
+                Route::post('/add', [RoomController::class, '_store']);
+                Route::post('/delete', [RoomController::class, '_delete']);
             });
 
             // Staff Routes

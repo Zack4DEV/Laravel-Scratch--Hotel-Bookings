@@ -1,544 +1,105 @@
-[2025-05-07 17:32:45] .ERROR: file_get_contents(/home/user/Hotel-Bookings/.env): Failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): file_get_contents(/home/user/Hotel-Bookings/.env): Failed to open stream: No such file or directory at /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php:100)
-[stacktrace]
-#0 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(256): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'file_get_conten...', '/home/user/Hote...', 100)
-#1 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->{closure:Illuminate\\Foundation\\Bootstrap\\HandleExceptions::forwardsTo():255}(2, 'file_get_conten...', '/home/user/Hote...', 100)
-#2 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(100): file_get_contents('/home/user/Hote...')
-#3 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(82): Illuminate\\Foundation\\Console\\KeyGenerateCommand->writeNewEnvironmentFileWith('base64:tcs7NH3v...')
-#4 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(47): Illuminate\\Foundation\\Console\\KeyGenerateCommand->setKeyInEnvironmentFile('base64:tcs7NH3v...')
-#5 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Foundation\\Console\\KeyGenerateCommand->handle()
-#6 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
-#7 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
-#8 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
-#9 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/Container.php(696): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
-#10 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/Command.php(213): Illuminate\\Container\\Container->call(Array)
-#11 /home/user/Hotel-Bookings/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
-#12 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
-#13 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(1094): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#14 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(342): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\KeyGenerateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#15 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#16 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#17 /home/user/Hotel-Bookings/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#18 {main}
-"} 
-[2025-05-07 17:32:54] .ERROR: file_get_contents(/home/user/Hotel-Bookings/.env): Failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): file_get_contents(/home/user/Hotel-Bookings/.env): Failed to open stream: No such file or directory at /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php:100)
-[stacktrace]
-#0 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(256): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'file_get_conten...', '/home/user/Hote...', 100)
-#1 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->{closure:Illuminate\\Foundation\\Bootstrap\\HandleExceptions::forwardsTo():255}(2, 'file_get_conten...', '/home/user/Hote...', 100)
-#2 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(100): file_get_contents('/home/user/Hote...')
-#3 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(82): Illuminate\\Foundation\\Console\\KeyGenerateCommand->writeNewEnvironmentFileWith('base64:YE9Po4t9...')
-#4 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(47): Illuminate\\Foundation\\Console\\KeyGenerateCommand->setKeyInEnvironmentFile('base64:YE9Po4t9...')
-#5 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Foundation\\Console\\KeyGenerateCommand->handle()
-#6 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
-#7 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
-#8 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
-#9 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/Container.php(696): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
-#10 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/Command.php(213): Illuminate\\Container\\Container->call(Array)
-#11 /home/user/Hotel-Bookings/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
-#12 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
-#13 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(1094): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#14 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(342): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\KeyGenerateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#15 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#16 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#17 /home/user/Hotel-Bookings/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#18 {main}
-"} 
-[2025-05-07 17:33:47] staging.ERROR: Command "dump-autoload" is not defined. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"dump-autoload\" is not defined. at /home/user/Hotel-Bookings/vendor/symfony/console/Application.php:726)
-[stacktrace]
-#0 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(284): Symfony\\Component\\Console\\Application->find('dump-autoload')
-#1 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#2 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#3 /home/user/Hotel-Bookings/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#4 {main}
-"} 
-[2026-02-01 13:28:38] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Log/LogManager.php:222)
-[stacktrace]
-#0 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(138): Illuminate\\Log\\LogManager->resolve(NULL, NULL)
-#1 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(125): Illuminate\\Log\\LogManager->get(NULL)
-#2 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(703): Illuminate\\Log\\LogManager->driver()
-#3 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(402): Illuminate\\Log\\LogManager->error('Class \"Maatwebs...', Array)
-#4 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(365): Illuminate\\Foundation\\Exceptions\\Handler->reportThrowable(Object(Error))
-#5 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(641): Illuminate\\Foundation\\Exceptions\\Handler->report(Object(Error))
-#6 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(200): Illuminate\\Foundation\\Console\\Kernel->reportException(Object(Error))
-#7 /home/user/Hotel-Bookings/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#8 {main}
-"} 
-[2026-02-01 13:28:38] laravel.ERROR: Class "Maatwebsite\Excel\Excel" not found {"exception":"[object] (Error(code: 0): Class \"Maatwebsite\\Excel\\Excel\" not found at /home/user/Hotel-Bookings/config/excel.php:180)
-[stacktrace]
-#0 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(115): require()
-#1 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(115): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->Illuminate\\Foundation\\Bootstrap\\{closure}()
-#2 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(96): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFile(Object(Illuminate\\Config\\Repository), 'excel', '/home/user/Hote...', Array)
-#3 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(55): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFiles(Object(Illuminate\\Foundation\\Application), Object(Illuminate\\Config\\Repository))
-#4 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->bootstrap(Object(Illuminate\\Foundation\\Application))
-#5 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate\\Foundation\\Application->bootstrapWith(Array)
-#6 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
-#7 /home/user/Hotel-Bookings/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#8 {main}
-"} 
-[2026-02-01 13:29:02] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Log/LogManager.php:222)
-[stacktrace]
-#0 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(138): Illuminate\\Log\\LogManager->resolve(NULL, NULL)
-#1 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(125): Illuminate\\Log\\LogManager->get(NULL)
-#2 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(703): Illuminate\\Log\\LogManager->driver()
-#3 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(402): Illuminate\\Log\\LogManager->error('Class \"Maatwebs...', Array)
-#4 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(365): Illuminate\\Foundation\\Exceptions\\Handler->reportThrowable(Object(Error))
-#5 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(641): Illuminate\\Foundation\\Exceptions\\Handler->report(Object(Error))
-#6 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(200): Illuminate\\Foundation\\Console\\Kernel->reportException(Object(Error))
-#7 /home/user/Hotel-Bookings/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#8 {main}
-"} 
-[2026-02-01 13:29:02] laravel.ERROR: Class "Maatwebsite\Excel\Excel" not found {"exception":"[object] (Error(code: 0): Class \"Maatwebsite\\Excel\\Excel\" not found at /home/user/Hotel-Bookings/config/excel.php:180)
-[stacktrace]
-#0 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(115): require()
-#1 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(115): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->Illuminate\\Foundation\\Bootstrap\\{closure}()
-#2 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(96): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFile(Object(Illuminate\\Config\\Repository), 'excel', '/home/user/Hote...', Array)
-#3 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(55): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFiles(Object(Illuminate\\Foundation\\Application), Object(Illuminate\\Config\\Repository))
-#4 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->bootstrap(Object(Illuminate\\Foundation\\Application))
-#5 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate\\Foundation\\Application->bootstrapWith(Array)
-#6 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
-#7 /home/user/Hotel-Bookings/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#8 {main}
-"} 
-[2026-02-01 13:33:44] .ERROR: There are no commands defined in the "display" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"display\" namespace. at /home/user/Hotel-Bookings/vendor/symfony/console/Application.php:694)
-[stacktrace]
-#0 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(743): Symfony\\Component\\Console\\Application->findNamespace('display')
-#1 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(298): Symfony\\Component\\Console\\Application->find('display:version')
-#2 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(195): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#3 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#4 /home/user/Hotel-Bookings/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#5 {main}
-"} 
-[2026-02-01 13:34:27] .ERROR: There are no commands defined in the "display" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"display\" namespace. at /home/user/Hotel-Bookings/vendor/symfony/console/Application.php:694)
-[stacktrace]
-#0 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(743): Symfony\\Component\\Console\\Application->findNamespace('display')
-#1 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(298): Symfony\\Component\\Console\\Application->find('display:version')
-#2 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(195): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#3 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#4 /home/user/Hotel-Bookings/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#5 {main}
-"} 
-[2026-02-01 13:38:00] .ERROR: View path not found. {"exception":"[object] (RuntimeException(code: 0): View path not found. at /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/ViewClearCommand.php:58)
-[stacktrace]
-#0 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Foundation\\Console\\ViewClearCommand->handle()
-#1 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
-#2 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
-#3 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
-#4 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
-#5 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate\\Container\\Container->call(Array)
-#6 /home/user/Hotel-Bookings/vendor/symfony/console/Command/Command.php(341): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
-#7 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
-#8 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(68): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Symfony\\Component\\Console\\Output\\NullOutput))
-#9 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(41): Illuminate\\Console\\Command->runCommand('view:clear', Array, Object(Symfony\\Component\\Console\\Output\\NullOutput))
-#10 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(53): Illuminate\\Console\\Command->callSilent('view:clear', Array)
-#11 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/OptimizeClearCommand.php(48): Illuminate\\Console\\Command->callSilently('view:clear')
-#12 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/View/Components/Task.php(41): Illuminate\\Foundation\\Console\\OptimizeClearCommand->Illuminate\\Foundation\\Console\\{closure}()
-#13 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/View/Components/Factory.php(59): Illuminate\\Console\\View\\Components\\Task->render('views', Object(Closure))
-#14 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/OptimizeClearCommand.php(48): Illuminate\\Console\\View\\Components\\Factory->__call('task', Array)
-#15 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Foundation\\Console\\OptimizeClearCommand->handle()
-#16 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
-#17 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
-#18 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
-#19 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
-#20 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate\\Container\\Container->call(Array)
-#21 /home/user/Hotel-Bookings/vendor/symfony/console/Command/Command.php(341): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
-#22 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
-#23 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(1102): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#24 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(356): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\OptimizeClearCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#25 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(195): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#26 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#27 /home/user/Hotel-Bookings/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#28 {main}
-"} 
-[2026-02-01 13:39:31] .ERROR: View path not found. {"exception":"[object] (RuntimeException(code: 0): View path not found. at /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/ViewClearCommand.php:58)
-[stacktrace]
-#0 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Foundation\\Console\\ViewClearCommand->handle()
-#1 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
-#2 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
-#3 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
-#4 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
-#5 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate\\Container\\Container->call(Array)
-#6 /home/user/Hotel-Bookings/vendor/symfony/console/Command/Command.php(341): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
-#7 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
-#8 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(68): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Symfony\\Component\\Console\\Output\\NullOutput))
-#9 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(41): Illuminate\\Console\\Command->runCommand('view:clear', Array, Object(Symfony\\Component\\Console\\Output\\NullOutput))
-#10 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(53): Illuminate\\Console\\Command->callSilent('view:clear', Array)
-#11 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/OptimizeClearCommand.php(48): Illuminate\\Console\\Command->callSilently('view:clear')
-#12 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/View/Components/Task.php(41): Illuminate\\Foundation\\Console\\OptimizeClearCommand->Illuminate\\Foundation\\Console\\{closure}()
-#13 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/View/Components/Factory.php(59): Illuminate\\Console\\View\\Components\\Task->render('views', Object(Closure))
-#14 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/OptimizeClearCommand.php(48): Illuminate\\Console\\View\\Components\\Factory->__call('task', Array)
-#15 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Foundation\\Console\\OptimizeClearCommand->handle()
-#16 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
-#17 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
-#18 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
-#19 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
-#20 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate\\Container\\Container->call(Array)
-#21 /home/user/Hotel-Bookings/vendor/symfony/console/Command/Command.php(341): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
-#22 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
-#23 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(1102): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#24 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(356): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\OptimizeClearCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#25 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(195): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#26 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#27 /home/user/Hotel-Bookings/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#28 {main}
-"} 
-[2026-02-01 13:52:43] .ERROR: file_get_contents(/home/user/Hotel-Bookings/.env): Failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): file_get_contents(/home/user/Hotel-Bookings/.env): Failed to open stream: No such file or directory at /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php:100)
-[stacktrace]
-#0 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(258): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'file_get_conten...', '/home/user/Hote...', 100)
-#1 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'file_get_conten...', '/home/user/Hote...', 100)
-#2 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(100): file_get_contents('/home/user/Hote...')
-#3 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(82): Illuminate\\Foundation\\Console\\KeyGenerateCommand->writeNewEnvironmentFileWith('base64:opp0RYTG...')
-#4 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(47): Illuminate\\Foundation\\Console\\KeyGenerateCommand->setKeyInEnvironmentFile('base64:opp0RYTG...')
-#5 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Foundation\\Console\\KeyGenerateCommand->handle()
-#6 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
-#7 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
-#8 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
-#9 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
-#10 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate\\Container\\Container->call(Array)
-#11 /home/user/Hotel-Bookings/vendor/symfony/console/Command/Command.php(341): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
-#12 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
-#13 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(1102): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#14 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(356): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\KeyGenerateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#15 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(195): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#16 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#17 /home/user/Hotel-Bookings/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#18 {main}
-"} 
-[2026-02-01 14:01:36] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:01:36] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:02:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:03:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:04:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:05:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:06:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:07:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:08:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:09:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:10:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:11:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:12:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:13:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:14:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:15:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:16:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:17:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:18:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:19:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:20:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:21:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:22:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:23:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:24:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:25:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:26:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:27:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:28:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:29:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:30:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:31:15] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:31:29] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:31:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:32:01] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:32:13] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:32:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:32:55] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:33:31] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:33:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:33:38] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:34:03] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:34:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:35:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:36:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:37:34] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:38:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:39:34] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:40:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:41:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:42:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:43:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:44:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:45:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:46:33] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:48:19] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:48:19] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:49:17] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:50:17] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:51:17] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:52:17] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:53:17] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:54:17] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:55:17] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:56:17] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:57:17] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:58:17] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 14:59:17] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 15:00:18] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 15:01:17] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 15:02:17] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 15:03:17] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 15:04:17] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 15:05:17] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 15:06:17] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 15:07:17] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 15:08:17] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 15:09:17] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 15:10:17] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 15:11:17] staging.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 15:12:17] local.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 15:13:17] local.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 15:14:17] local.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 15:15:17] local.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
-[stacktrace]
-#0 {main}
-"} 
-[2026-02-01 15:16:17] local.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
+[2026-02-01 15:40:31] local.ERROR: Class "App\Http\Controllers\RoomController" does not exist {"exception":"[object] (ReflectionException(code: -1): Class \"App\\Http\\Controllers\\RoomController\" does not exist at /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/RouteListCommand.php:235)
+[stacktrace]
+#0 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/RouteListCommand.php(235): ReflectionClass->__construct('App\\\\Http\\\\Contro...')
+#1 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/RouteListCommand.php(149): Illuminate\\Foundation\\Console\\RouteListCommand->isVendorRoute(Object(Illuminate\\Routing\\Route))
+#2 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/RouteListCommand.php(117): Illuminate\\Foundation\\Console\\RouteListCommand->getRouteInformation(Object(Illuminate\\Routing\\Route))
+#3 [internal function]: Illuminate\\Foundation\\Console\\RouteListCommand->Illuminate\\Foundation\\Console\\{closure}(Object(Illuminate\\Routing\\Route), 21)
+#4 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Collections/Arr.php(823): array_map(Object(Closure), Array, Array)
+#5 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Collections/Collection.php(844): Illuminate\\Support\\Arr::map(Array, Object(Closure))
+#6 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/RouteListCommand.php(117): Illuminate\\Support\\Collection->map(Object(Closure))
+#7 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/RouteListCommand.php(102): Illuminate\\Foundation\\Console\\RouteListCommand->getRoutes()
+#8 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Foundation\\Console\\RouteListCommand->handle()
+#9 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#10 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#11 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#12 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#13 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate\\Container\\Container->call(Array)
+#14 /home/user/Hotel-Bookings/vendor/symfony/console/Command/Command.php(341): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#15 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#16 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(1102): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(356): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\RouteListCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#18 /home/user/Hotel-Bookings/vendor/symfony/console/Application.php(195): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 /home/user/Hotel-Bookings/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 {main}
+"} 
+[2026-02-01 15:40:59] local.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
+[stacktrace]
+#0 {main}
+"} 
+[2026-02-01 15:41:59] local.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
+[stacktrace]
+#0 {main}
+"} 
+[2026-02-01 15:42:57] local.ERROR: View [application] not found. {"exception":"[object] (InvalidArgumentException(code: 0): View [application] not found. at /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php:138)
+[stacktrace]
+#0 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php(78): Illuminate\\View\\FileViewFinder->findInPaths('application', Array)
+#1 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/View/Factory.php(150): Illuminate\\View\\FileViewFinder->find('application')
+#2 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(1101): Illuminate\\View\\Factory->make('application', Array, Array)
+#3 /home/user/Hotel-Bookings/routes/web.php(73): view('application')
+#4 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(39): Illuminate\\Routing\\RouteFileRegistrar->{closure}()
+#5 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Routing/Route.php(243): Illuminate\\Routing\\CallableDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(Closure))
+#6 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Routing/Route.php(214): Illuminate\\Routing\\Route->runCallable()
+#7 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate\\Routing\\Route->run()
+#8 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#9 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#10 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#11 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#13 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#15 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#17 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#24 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#25 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#26 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#27 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#28 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#29 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(61): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#49 /home/user/Hotel-Bookings/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#50 /home/user/Hotel-Bookings/public/index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#51 /home/user/Hotel-Bookings/server.php(21): require_once('/home/user/Hote...')
+#52 {main}
+"} 
+[2026-02-01 15:42:59] local.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
+[stacktrace]
+#0 {main}
+"} 
+[2026-02-01 15:44:00] local.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
+[stacktrace]
+#0 {main}
+"} 
+[2026-02-01 15:44:59] local.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
+[stacktrace]
+#0 {main}
+"} 
+[2026-02-01 15:45:59] local.ERROR: Trait "Laravel\Sanctum\HasApiTokens" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Laravel\\Sanctum\\HasApiTokens\" not found at /home/user/Hotel-Bookings/app/Models/User.php:11)
 [stacktrace]
 #0 {main}
 "} 
