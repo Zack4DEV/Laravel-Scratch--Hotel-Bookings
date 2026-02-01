@@ -21,7 +21,7 @@
         "laravel/sail": "^1.39",
         "mockery/mockery": "^1.6.12",
         "nunomaduro/collision": "^8.5",
-        "orchestra/testbench": "11.x-dev",
+        "orchestra/testbench": "10.x-dev",
         "phpunit/phpunit": "^11.5.0",
         "spatie/laravel-ignition": "^2.9"
     },
