@@ -13,14 +13,14 @@ export default defineConfig({
     ],
     resolve: {
         alias: {
-            '@': path.resolve(__dirname, 'resources/js'),
-            '@admin': path.resolve(__dirname, 'resources/js/admin'),
-            '@components': path.resolve(__dirname, 'resources/js/components'),
-            '@navigation': path.resolve(__dirname, 'resources/js/navigation'),
-            '@utils': path.resolve(__dirname, 'resources/js/utils'),
-            '@hotel': path.resolve(__dirname, 'resources/js/components/Hotel'),
-            '@screens': path.resolve(__dirname, 'resources/js/admin/screens'),
-            '@adminComponents': path.resolve(__dirname, 'resources/js/admin/components'),
+            '@': path.resolve(__dirname, 'resources/ts'),
+            '@admin': path.resolve(__dirname, 'resources/ts/admin'),
+            '@components': path.resolve(__dirname, 'resources/ts/components'),
+            '@navigation': path.resolve(__dirname, 'resources/ts/navigation'),
+            '@utils': path.resolve(__dirname, 'resources/ts/utils'),
+            '@hotel': path.resolve(__dirname, 'resources/ts/components/Hotel'),
+            '@screens': path.resolve(__dirname, 'resources/ts/admin/screens'),
+            '@adminComponents': path.resolve(__dirname, 'resources/ts/admin/components'),
         },
     },
     server: {

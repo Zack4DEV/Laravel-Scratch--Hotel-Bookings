@@ -17,14 +17,14 @@
         "useDefineForClassFields": true,
         "baseUrl": ".",
         "paths": {
-            "@/*": ["resources/js/*"],
-            "@admin/*": ["resources/js/admin/*"],
-            "@components/*": ["resources/js/components/*"],
-            "@navigation/*": ["resources/js/navigation/*"],
-            "@utils/*": ["resources/js/utils/*"],
-            "@hotel/*": ["resources/js/components/Hotel/*"],
-            "@screens/*": ["resources/js/admin/screens/*"],
-            "@adminComponents/*": ["resources/js/admin/components/*"]
+            "@/*": ["resources/ts/*"],
+            "@admin/*": ["resources/ts/admin/*"],
+            "@components/*": ["resources/ts/components/*"],
+            "@navigation/*": ["resources/ts/navigation/*"],
+            "@utils/*": ["resources/ts/utils/*"],
+            "@hotel/*": ["resources/ts/components/Hotel/*"],
+            "@screens/*": ["resources/ts/admin/screens/*"],
+            "@adminComponents/*": ["resources/ts/admin/components/*"]
         },
         "types": ["vite/client"],
         "allowJs": true,
@@ -34,9 +34,9 @@
         "forceConsistentCasingInFileNames": true
     },
     "include": [
-        "resources/js/**/*.ts",
-        "resources/js/**/*.tsx",
-        "resources/js/**/*.d.ts"
+        "resources/ts/**/*.ts",
+        "resources/ts/**/*.tsx",
+        "resources/ts/**/*.d.ts"
     ],
     "exclude": [
         "node_modules",

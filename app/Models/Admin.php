@@ -11,8 +11,8 @@ class Admin extends Model {
     protected $primaryKey = 'id';
 
     protected $fillable = [
-       'Email',
-       'Password'
+       'email',
+       'password'
     ];
 
         /**
@@ -21,7 +21,7 @@ class Admin extends Model {
      * @var array<int, string>
      */
     protected $hidden = [
-        'Password',
+        'password',
         'remember_token',
     ];
 
@@ -32,7 +32,7 @@ class Admin extends Model {
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'Password' => 'hashed'
+        'password' => 'hashed'
         ];
 
 }
